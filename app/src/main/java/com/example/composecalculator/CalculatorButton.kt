@@ -30,7 +30,7 @@ fun CalculatorButton(
     ) {
         Text(
             text = symbol,
-            style = MaterialTheme.typography.displayMedium,
+            style = MaterialTheme.typography.displaySmall,
             color = MaterialTheme.colorScheme.onSurface
         )
     }
@@ -47,8 +47,8 @@ fun PrevButton() {
         CalculatorButton(
             symbol = "+",
             modifier = Modifier
-                .background(Color.Cyan)
-                .width(150.dp)
+                .background(Color.DarkGray)
+                .width(70.dp)
         ) {
 
         }
