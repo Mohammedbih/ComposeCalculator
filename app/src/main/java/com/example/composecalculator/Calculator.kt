@@ -23,9 +23,9 @@ import com.example.composecalculator.ui.theme.Orange
 
 @Composable
 fun Calculator(
+    modifier: Modifier = Modifier,
     state: CalculatorState,
     buttonSpacing: Dp = 8.dp,
-    modifier: Modifier = Modifier,
     onAction: (CalculatorAction) -> Unit
 ) {
     Box(modifier = modifier) {
@@ -36,7 +36,7 @@ fun Calculator(
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)
         ) {
             Text(
-                text = state.number1 + (state.operation?.symbol ?: "") + state.number2,
+                text = state.number1 + (state.operation?.symbol ?:"") + state.number2,
                 textAlign = TextAlign.End,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -75,8 +75,8 @@ fun Calculator(
                     symbol = "/",
                     modifier = Modifier
                         .background(Orange)
-                        .aspectRatio(2f)
-                        .weight(2f),
+                        .aspectRatio(1f)
+                        .weight(1f),
                     onClick = {
                         onAction(CalculatorAction.Operation(CalculatorOperation.Divide))
                     }
@@ -255,7 +255,7 @@ fun Calculator(
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
-                        onAction(CalculatorAction.Calculator)
+                        onAction(CalculatorAction.Calculate)
                     }
                 )
             }
