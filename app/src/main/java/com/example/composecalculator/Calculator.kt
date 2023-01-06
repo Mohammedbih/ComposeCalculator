@@ -44,7 +44,7 @@ fun Calculator(
                     .padding(vertical = 32.dp),
                 fontWeight = FontWeight.Light,
                 fontSize = 60.sp,
-                color = MaterialTheme.colorScheme.onSurface,
+                color = MaterialTheme.colorScheme.onPrimary,
                 maxLines = 2
             )
 

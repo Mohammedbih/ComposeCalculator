@@ -31,7 +31,7 @@ fun CalculatorButton(
         Text(
             text = symbol,
             style = MaterialTheme.typography.displaySmall,
-            color = MaterialTheme.colorScheme.onSurface
+            color = MaterialTheme.colorScheme.onPrimary
         )
     }
 }
